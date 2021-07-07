@@ -35,6 +35,19 @@ tableCreate = () => {
 
 calculateAverage = () => {
     const total = students.reduce((acc, students) => acc + students.age, 0);
+    const wait = time => new Promise((resolve) => setTimeout(resolve, time));
+    async function asyncAwait() {
+        console.log("calculation start");
+        await wait(2000);
+        console.log("second call started");
+        await wait(3000);
+        console.log("second call finished");
+        console.log("third call started");
+        console.log("the average age is " + total / students.length)
         let averageAge = document.getElementById("averageAge");
         averageAge.innerHTML = total / students.length;
+        await wait(5000);
+        console.log("third call finished");
+    }
+    asyncAwait();
 }
