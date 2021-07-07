@@ -1,0 +1,18 @@
+.header {
+    text-align: center;
+}
+
+form {
+    display: block;
+}
+.formDiv {
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+
+.content {
+    outline: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}

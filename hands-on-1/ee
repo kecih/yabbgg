@@ -1,0 +1,26 @@
+const body = document.body;
+const table = document.createElement("table");
+const tableBody = document.createElement("tbody");
+const calculateBtn = document.getElementById("calculate-btn");
+
+const students = [
+    {name:"Alice", age: 20},
+    {name:"Bob", age: 21},
+    {name:"Jane", age: 20}
+]
+
+const createTable = () => {
+    for (let i = 0; i < students.length; i++){
+        let row = document.createElement("tr");
+        let cell = document.createElement("td");
+        let cellText = document.createTextNode(students[i].name + students[i].age)
+        
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+    }
+    table.appendChild(tableBody);
+    table.setAttribute("border", "2");
+}
+// createTable();
+console.log(students);
